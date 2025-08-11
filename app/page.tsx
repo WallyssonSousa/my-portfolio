@@ -32,7 +32,7 @@ export default function Page() {
         <Contact />
         {/* Outros componentes da página */}
         <footer className="py-10 text-center text-[#9aa4b2]">
-          © Wallysson Oliveira · Template interativo para inspiração
+          © Wallysson Oliveira · Portfólio Pessoal.
         </footer>
       </main>
     </div>

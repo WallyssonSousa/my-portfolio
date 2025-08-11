@@ -9,9 +9,9 @@ export default function Contact() {
             E-mail:{" "}
             <a
               className="underline decoration-white/20 underline-offset-4 hover:text-white"
-              href="mailto:seu@email.com"
+              href="mailto:wallysson.dev@gmail.com"
             >
-              seu@email.com
+              wallysson.dev@gmail.com
             </a>
           </div>
         </div>
