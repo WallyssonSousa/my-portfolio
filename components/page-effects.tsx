@@ -9,7 +9,7 @@ export default function PageEffects() {
             window.matchMedia &&
             window.matchMedia("(prefers-reduced-motion: reduce)").matches
 
-        // Smooth anchors com offset do header
+        
         const header = document.querySelector("header")
         const headerH = () => (header ? header.getBoundingClientRect().height : 0)
 

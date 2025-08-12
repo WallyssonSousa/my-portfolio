@@ -107,26 +107,29 @@ export default function About() {
           <TabsList className="flex w-full justify-start gap-2 rounded-xl bg-white/5 p-1.5 backdrop-blur-sm">
             <TabsTrigger
               value="academica"
-              className="data-[state=active]:bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.03))] data-[state=active]:border data-[state=active]:border-white/10 rounded-lg px-3 py-2 text-sm"
+              className="text-white/80 hover:text-white data-[state=active]:text-gray-900 data-[state=active]:bg-[linear-gradient(180deg,rgba(255,255,255,0.9),rgba(255,255,255,0.8))] data-[state=active]:border data-[state=active]:border-white/10 rounded-lg px-3 py-2 text-sm transition-colors duration-200"
             >
               <GraduationCap className="mr-2 h-4 w-4 opacity-80" />
               Acadêmica
             </TabsTrigger>
+
             <TabsTrigger
               value="profissional"
-              className="data-[state=active]:bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.03))] data-[state=active]:border data-[state=active]:border-white/10 rounded-lg px-3 py-2 text-sm"
+              className="text-white/80 hover:text-white data-[state=active]:text-gray-900 data-[state=active]:bg-[linear-gradient(180deg,rgba(255,255,255,0.9),rgba(255,255,255,0.8))] data-[state=active]:border data-[state=active]:border-white/10 rounded-lg px-3 py-2 text-sm transition-colors duration-200"
             >
               <Briefcase className="mr-2 h-4 w-4 opacity-80" />
               Profissional
             </TabsTrigger>
+
             <TabsTrigger
               value="projetos"
-              className="data-[state=active]:bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.03))] data-[state=active]:border data-[state=active]:border-white/10 rounded-lg px-3 py-2 text-sm"
+              className="text-white/80 hover:text-white data-[state=active]:text-gray-900 data-[state=active]:bg-[linear-gradient(180deg,rgba(255,255,255,0.9),rgba(255,255,255,0.8))] data-[state=active]:border data-[state=active]:border-white/10 rounded-lg px-3 py-2 text-sm transition-colors duration-200"
             >
               <Wrench className="mr-2 h-4 w-4 opacity-80" />
               Projetos pessoais
             </TabsTrigger>
           </TabsList>
+
 
           {/* Acadêmica */}
           <TabsContent value="academica" className="mt-6">
