@@ -12,7 +12,6 @@ export default function Page() {
   const containerRef = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
-    // PageEffects component will handle these effects
   }, [])
 
   return (
@@ -20,7 +19,6 @@ export default function Page() {
       ref={containerRef}
       className="relative min-h-screen bg-gradient-to-b from-[#0b1020] to-[#071024] text-[#e6eef8]"
     >
-      {/* Efeitos e microinterações globais (anchors suaves, underline do menu, reveals, tilt, magnético, ripple, cursor, partículas, etc.) */}
       <PageEffects />
 
       <Header />
@@ -30,7 +28,6 @@ export default function Page() {
         <Projects />
         <About />
         <Contact />
-        {/* Outros componentes da página */}
         <footer className="py-10 text-center text-[#9aa4b2]">
           © Wallysson Oliveira · Portfólio Pessoal.
         </footer>
