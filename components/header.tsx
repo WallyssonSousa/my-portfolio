@@ -24,6 +24,9 @@ export default function Header() {
             <li className="active opacity-90 text-[14px]">
               <a href="#home">Início</a>
             </li>
+            <li className="active opacity-90 text-[14px]">
+              <a href="#tech-stack">Tecnologias</a>
+            </li>
             <li className="opacity-90 text-[14px]">
               <a href="#projects">Projetos</a>
             </li>
