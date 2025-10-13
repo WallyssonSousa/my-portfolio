@@ -12,7 +12,7 @@ interface Tech {
 interface OrbitCategory {
   title: string
   techs: Tech[]
-  radiusRatio: number // Changed from fixed radius to ratio
+  radiusRatio: number
   speed: number
   tilt: number
 }
@@ -337,8 +337,8 @@ export default function EnhancedTechStack() {
         <div className="mb-6 flex justify-center sm:mb-8">
           <canvas
             ref={canvasRef}
-            className="h-[400px] w-full max-w-[800px] sm:h-[500px] md:h-[600px] lg:h-[650px]"
-            style={{ maxHeight: "650px" }}
+            className="h-[550px] w-full max-w-[1000px] sm:h-[700px] md:h-[800px] lg:h-[900px]"
+            style={{ maxHeight: "900px" }}
           />
         </div>
 
