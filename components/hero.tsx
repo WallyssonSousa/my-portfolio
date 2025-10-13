@@ -40,10 +40,10 @@ export default function Hero() {
           >
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
               <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-[14px] bg-[linear-gradient(135deg,#8b5cf6,#06b6d4)] font-extrabold">
-                WO
+                WS
               </div>
               <div>
-                <div className="font-bold">Wallysson Oliveira</div>
+                <div className="font-bold">Wallysson Sousa</div>
                 <div className="text-[13px] text-[#9aa4b2]">Desenvolvedor — design centrado em usuário</div>
               </div>
             </div>
