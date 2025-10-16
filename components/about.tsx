@@ -13,7 +13,7 @@ type AcademicItem = {
   highlights?: string[]
 }
 
-type ProfessionalItem = {
+type PROFISSIONALItem = {
   role: string
   company: string
   location?: string
@@ -28,27 +28,30 @@ const ACADEMIC: AcademicItem[] = [
     institution: "Faculdade Impacta",
     location: "São Paulo, SP",
     period: "2024 — Em Andamento",
-    details: "Ênfase em estruturas de dados, engenharia de software e experiência do usuário. Monitoria em Algoritmos.",
-    highlights: ["Dados", "Engenharia de Software"],
+    details: "Tive aprendizado sólido em desenvolvimento web, mobile e banco de dados relacionais. Microserviços e boas práticas de engenharia de Software, além das práticas com arquitetura MVC e Hexagonal.",
+    highlights: ["Desenvolvimento Web", "Desenvolvimento Full Stack", "APIs RESTful", "Banco de Dados Relacionais",
+     "Microserviços", "Arquitetura Hexagonal", "Arquitetura MVC", "Engenharia de Software", "Desenvolvimento Mobile",
+     "Docker", "Git e GitHub", "Metodologias Ágeis"],
   },
   {
     title: "Técnico em Desenvolvimento de Sistemas",
     institution: "Etec Jardim Paulistano",
     location: "São Paulo, SP",
     period: "2021 — 2023",
-    details: "Microserviços, mensageria e observabilidade. Foco em escalabilidade e boas práticas de engenharia.",
-    highlights: ["Desenho de arquitetura hexagonal", "Padrões de reatividade e caching"],
+    details: "Meu primerio contato com programação, tendo o conhecimento inicial, e técnico em lógica de programação, algoritmos, desenvolvimento de sistemas, desenvolviment mobile, análise de sistemas e banco de dados.",
+    highlights: ["Lógica de Programação", "Banco de dados relacionais", "Desenvolvimento Web", "Desenvolvimento Mobile", "Análise de Sistemas", "Desenvolvimento de Sistemas"
+     ],
   },
 ]
 
-const PROFESSIONAL: ProfessionalItem[] = [
+const PROFISSIONAL: PROFISSIONALItem[] = [
   {
     role: "Estagiário em Desenvolvimento de Software",
     company: "Soft Clever",
     location: "Presencial",
     period: "2025 - Atual",
-    details: "Construção de aplicações web performáticas com foco em DX e UX. Entrega contínua e monitoração ativa.",
-    stack: ["Next.js", "TypeScript", "MySQL", "Express", "Docker"],
+    details: "Construção de aplicações web para empresas do setores de vendas e financeiro. Aplicações que interagem com o ERP Sirius, da própria Soft Clever. Desenvolvimento de Aplicativos PDV, com integração de API local e web. Além de manutenção e melhora em aplicações legados, seja backend ou frontend.",
+    stack: ["Next.js", "TypeScript", "MySQL", "Express", "Docker", "React Native", "Github", "Shadcn", "Figma", "Postman", "Java Script", "Arquitetura MVC"],
   },
 ]
 
@@ -56,8 +59,7 @@ export default function About() {
   return (
     <section id="about" className="py-28">
       <h2 className="section-title mb-5 text-[22px]">Sobre mim</h2>
-
-      {/* Intro curta com reveal */}
+ 
       <p className="section-fade m-0 max-w-3xl opacity-0 translate-y-8 blur-[4px] transition-all duration-700 will-change-[transform,opacity,filter]">
         Sou desenvolvedor com experiência em aplicações web, APIs e automação. Gosto de unir engenharia sólida com
         design e microinterações, mantendo performance e clareza como prioridades.
@@ -140,7 +142,7 @@ export default function About() {
           {/* Profissional */}
           <TabsContent value="profissional" className="mt-6">
             <ul className="space-y-4">
-              {PROFESSIONAL.map((item, i) => (
+              {PROFISSIONAL.map((item, i) => (
                 <li
                   key={item.role + i}
                   className="rounded-2xl border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01))] p-5 shadow-[0_6px_30px_rgba(2,6,23,0.25)] backdrop-blur-md"
