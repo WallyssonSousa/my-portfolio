@@ -42,10 +42,17 @@ export default function EnhancedTechStack() {
     {
       title: "O que eu uso no trabalho",
       techs: [
-        { name: "React", color: "#61DAFB", shadowColor: "rgba(97, 218, 251, 0.4)" },
-        { name: "TypeScript", color: "#3178C6", shadowColor: "rgba(49, 120, 198, 0.4)" },
         { name: "Next.js", color: "#FFFFFF", shadowColor: "rgba(255, 255, 255, 0.3)" },
-        { name: "Node.js", color: "#339933", shadowColor: "rgba(51, 153, 51, 0.4)" },
+        { name: "TypeScript", color: "#3178C6", shadowColor: "rgba(49, 120, 198, 0.4)" },
+        { name: "Express", color: "#339933", shadowColor: "rgba(51, 153, 51, 0.4)" },
+        { name: "MySQL", color: "#CC2927", shadowColor: "rgba(204, 41, 39, 0.4)" },
+        { name: "Docker", color: "#2496ED", shadowColor: "rgba(36, 150, 237, 0.4)" },
+        { name: "Tailwind", color: "#38BDF8", shadowColor: "rgba(56, 189, 248, 0.4)" },
+        { name: "Figma", color: "#F24E1E", shadowColor: "rgba(242, 78, 30, 0.4)" },
+        { name: "Postman", color: "#FF6C37", shadowColor: "rgba(255, 108, 55, 0.4)" },
+        { name: "GitHub", color: "#181717", shadowColor: "rgba(24, 23, 23, 0.4)" },
+        { name: "React Native", color: "#3FA9F5", shadowColor: "rgba(63, 169, 245, 0.4)"}
+
       ],
       radiusRatio: 0.35, // 35% of base radius
       speed: 0.0005,
@@ -54,10 +61,11 @@ export default function EnhancedTechStack() {
     {
       title: "O que eu uso e estudo na faculdade",
       techs: [
-        { name: "Java", color: "#ED8B00", shadowColor: "rgba(237, 139, 0, 0.4)" },
-        { name: "Spring Boot", color: "#6DB33F", shadowColor: "rgba(109, 179, 63, 0.4)" },
         { name: "Python", color: "#3776AB", shadowColor: "rgba(55, 118, 171, 0.4)" },
-        { name: "SQL", color: "#CC2927", shadowColor: "rgba(204, 41, 39, 0.4)" },
+        { name: "React", color: "#61DAFB", shadowColor: "rgba(97, 218, 251, 0.4)" },
+        { name: "Flask", color: "#FFFFFF", shadowColor: "rgba(255, 255, 255, 0.3)" },
+        { name: "Postgres", color: "#336791", shadowColor: "rgba(51, 103, 145, 0.4)" },
+        { name: "Kotlin", color: "#A97BFF", shadowColor: "rgba(169, 123, 255, 0.4)" },
       ],
       radiusRatio: 0.55, // 55% of base radius
       speed: 0.0004,
@@ -66,10 +74,10 @@ export default function EnhancedTechStack() {
     {
       title: "O que eu estudo para desenvolvimento pessoal",
       techs: [
-        { name: "Three.js", color: "#049EF4", shadowColor: "rgba(4, 158, 244, 0.4)" },
-        { name: "Rust", color: "#CE422B", shadowColor: "rgba(206, 66, 43, 0.4)" },
-        { name: "Go", color: "#00ADD8", shadowColor: "rgba(0, 173, 216, 0.4)" },
-        { name: "Docker", color: "#2496ED", shadowColor: "rgba(36, 150, 237, 0.4)" },
+        { name: "Java", color: "#ED8B00", shadowColor: "rgba(237, 139, 0, 0.4)" },
+        { name: "Spring Boot", color: "#6DB33F", shadowColor: "rgba(109, 179, 63, 0.4)" },
+        { name: "Nest.js", color: "#E0234E", shadowColor: "rgba(224, 35, 78, 0.4)" },
+        { name: "MongoDB", color: "#47A248", shadowColor: "rgba(71, 162, 72, 0.4)" },
       ],
       radiusRatio: 0.75, // 75% of base radius
       speed: 0.0003,
@@ -107,7 +115,7 @@ export default function EnhancedTechStack() {
       const centerY = rect.height / 2
 
       const baseRadius = Math.min(rect.width, rect.height) * 0.38
-      const scaleFactor = baseRadius / 300 // Scale all elements proportionally
+      const scaleFactor = baseRadius / 280 // Reduzido de 300 para 280 para elementos maiores
 
       ctx.clearRect(0, 0, rect.width, rect.height)
 
@@ -251,7 +259,7 @@ export default function EnhancedTechStack() {
           const iconSize = 32 * scale * scaleFactor
 
           const shadowColor = tech.shadowColor || `${tech.color}40`
-          const glowSize = iconSize * 2.5
+          const glowSize = iconSize * 1.75
           const glowGradient = ctx.createRadialGradient(x, y, 0, x, y, glowSize)
           glowGradient.addColorStop(0, shadowColor)
           glowGradient.addColorStop(0.5, shadowColor.replace(/[\d.]+\)$/, "0.2)"))
@@ -329,15 +337,12 @@ export default function EnhancedTechStack() {
         Tecnologias &{" "}
         <span className="bg-gradient-to-r from-[#8b5cf6] to-[#06b6d4] bg-clip-text text-transparent">Ferramentas</span>
       </h2>
-      <p className="mb-8 text-center text-sm text-[#9aa4b2] sm:mb-10 sm:text-base lg:mb-12">
-        Meu ecossistema de desenvolvimento em órbita
-      </p>
 
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="mb-6 flex justify-center sm:mb-8">
           <canvas
             ref={canvasRef}
-            className="h-[550px] w-full max-w-[1000px] sm:h-[700px] md:h-[800px] lg:h-[900px]"
+            className="h-[700px] w-full max-w-[1000px] sm:h-[750px] md:h-[850px] lg:h-[900px]"
             style={{ maxHeight: "900px" }}
           />
         </div>
