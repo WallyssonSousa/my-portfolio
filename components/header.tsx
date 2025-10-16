@@ -1,14 +1,19 @@
 "use client";
 
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, LogOut } from "lucide-react";
 
-export default function Header() {
+interface HeaderProps {
+  onExit?: () => void; // nova prop para ação de sair
+}
+
+export default function Header({ onExit }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <header className="fixed inset-x-0 top-0 z-40 border-b border-white/5 bg-[linear-gradient(180deg,rgba(11,16,32,0.6),rgba(11,16,32,0.2))] backdrop-blur-md px-6 py-3">
       <div className="mx-auto flex max-w-[1100px] items-center justify-between">
+        {/* Logo e nome */}
         <div className="brand flex items-center gap-3 font-semibold">
           <div className="logo flex h-11 w-11 items-center justify-center rounded-[10px] bg-[linear-gradient(135deg,#8b5cf6,#06b6d4)] font-extrabold text-[#061025]">
             W
@@ -19,12 +24,13 @@ export default function Header() {
           </div>
         </div>
 
+        {/* Menu desktop */}
         <nav className="hidden md:block">
           <ul id="menu" className="relative flex list-none gap-[18px] p-0">
             <li className="active opacity-90 text-[14px]">
               <a href="#home">Início</a>
             </li>
-            <li className="active opacity-90 text-[14px]">
+            <li className="opacity-90 text-[14px]">
               <a href="#tech-stack">Tecnologias</a>
             </li>
             <li className="opacity-90 text-[14px]">
@@ -39,6 +45,16 @@ export default function Header() {
           </ul>
         </nav>
 
+        {/* Botão "Sair" */}
+        <button
+          onClick={onExit}
+          className="hidden md:flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm text-white transition hover:bg-white/10 hover:text-[#06b6d4]"
+        >
+          <LogOut size={16} />
+          Sair
+        </button>
+
+        {/* Botão mobile menu */}
         <button
           className="md:hidden flex items-center justify-center p-2 text-white"
           onClick={() => setIsOpen(!isOpen)}
@@ -47,28 +63,33 @@ export default function Header() {
         </button>
       </div>
 
+      {/* Menu mobile */}
       {isOpen && (
         <div className="md:hidden mt-3 rounded-lg border border-white/10 bg-[rgba(11,16,32,0.95)] backdrop-blur-lg">
           <ul className="flex flex-col gap-4 p-4 text-center">
-            <li className="active opacity-90 text-[14px]">
-              <a href="#home" onClick={() => setIsOpen(false)}>
-                Início
-              </a>
+            <li>
+              <a href="#home" onClick={() => setIsOpen(false)}>Início</a>
             </li>
-            <li className="opacity-90 text-[14px]">
-              <a href="#projects" onClick={() => setIsOpen(false)}>
-                Projetos
-              </a>
+            <li>
+              <a href="#projects" onClick={() => setIsOpen(false)}>Projetos</a>
             </li>
-            <li className="opacity-90 text-[14px]">
-              <a href="#about" onClick={() => setIsOpen(false)}>
-                Sobre
-              </a>
+            <li>
+              <a href="#about" onClick={() => setIsOpen(false)}>Sobre</a>
             </li>
-            <li className="opacity-90 text-[14px]">
-              <a href="#contact" onClick={() => setIsOpen(false)}>
-                Contato
-              </a>
+            <li>
+              <a href="#contact" onClick={() => setIsOpen(false)}>Contato</a>
+            </li>
+            <li>
+              <button
+                onClick={() => {
+                  setIsOpen(false);
+                  onExit?.();
+                }}
+                className="mt-2 flex items-center justify-center gap-2 rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm text-white transition hover:bg-white/10"
+              >
+                <LogOut size={16} />
+                Sair
+              </button>
             </li>
           </ul>
         </div>
