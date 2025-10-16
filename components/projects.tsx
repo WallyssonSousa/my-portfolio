@@ -9,9 +9,12 @@ import { useEffect, useRef } from "react"
 export default function Projects() {
   return (
     <section id="projects" className="py-28">
-      <h2 className="section-title mb-5 text-[22px]">Projetos em destaque</h2>
+      <h2 className="mb-3 text-center text-2xl font-bold sm:mb-4 sm:text-3xl lg:text-4xl">
+        Projetos em{" "}
+        <span className="bg-gradient-to-r from-[#8b5cf6] to-[#06b6d4] bg-clip-text text-transparent">Destaque</span>
+      </h2>
 
-      <div className="projects grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="projects mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((p, index) => (
           <ProjectCard key={p.slug} project={p} index={index} />
         ))}
@@ -51,7 +54,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
   return (
     <article
       ref={cardRef}
-      className="project-card section-fade group relative transform-gpu overflow-hidden rounded-xl border border-white/5 bg-white/[0.02] shadow-[0_6px_30px_rgba(2,6,23,0.3)] backdrop-blur-md transition-all duration-500 opacity-0 translate-y-8 blur-[4px] hover:border-white/20"
+      className="project-card section-fade group relative transform-gpu overflow-hidden rounded-xl border border-white/10 bbg-[linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.015))] shadow-[0_6px_30px_rgba(2,6,23,0.35)] backdrop-blur-md transition-all duration-500 opacity-0 translate-y-8 blur-[4px] hover:border-white/20"
       data-tilt
       aria-label={`Abrir projeto ${project.title}`}
       style={
